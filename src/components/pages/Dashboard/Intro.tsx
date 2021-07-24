@@ -16,7 +16,7 @@ const Intro: React.FC<IntroProps> = ({}) => {
   const margin = 2;
 
   return (
-    <Box id="intro" className={classes.nothing}>
+    <Box id="intro" className={classes.root}>
       <SectionContainer>
         <Box my={margin}>
           <Typography variant="h6">Hi, my name is</Typography>
@@ -51,23 +51,10 @@ const Intro: React.FC<IntroProps> = ({}) => {
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    nothing: {
-      // marginBottom: 150,
-    },
     margin: {
       marginTop: theme.spacing(5),
-      // marginBottom: theme.spacing(5),
     },
-    // root: {
-    //   display: "flex",
-    //   height: 300,
-    //   justifyContent: "center",
-    //   alignItems: "center",
-    //   backgroundImage: `url(${Image})`,
-    //   backgroundSize: "cover",
-    //   backgroundRepeat: "no-repeat",
-    //   backgroundPosition: "center center",
-    // },
+    root: {},
     heading: {
       fontWeight: 800,
     },
