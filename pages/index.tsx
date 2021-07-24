@@ -1,5 +1,7 @@
+import Dashboard from "../src/components/pages/Dashboard";
+
 function HomePage() {
-    return <div>Welcome to Next.js!</div>
-  }
-  
-  export default HomePage
+  return <Dashboard />;
+}
+
+export default HomePage;

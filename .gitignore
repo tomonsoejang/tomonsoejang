@@ -6,6 +6,9 @@
 .env
 .env.build
 
+# asssets directories
+assets/
+
 # Dependency directories
 node_modules/
 
