@@ -19,7 +19,7 @@ const fileHost = `${host}/${encodedFilePath}`;
 const profileImage = `${imageHost}me.jpg?alt=media`;
 const kyfImage = `${imageHost}kyf-app-screenshots.png?alt=media`;
 const bannerImage = `${imageHost}banner.jpg?alt=media`;
-const resumeLink = `${fileHost}/sarphu-rongpi-resume.pdf?alt=media`;
+const resumeLink = `${fileHost}sarphu-rongpi-resume.pdf?alt=media`;
 
 const instagramProfile = "https://www.instagram.com/tomonsoejang";
 const facebookProfile = "https://facebook.com/tomonsoejang";
