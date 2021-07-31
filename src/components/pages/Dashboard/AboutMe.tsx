@@ -73,7 +73,7 @@ interface StyleProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     image: (props: StyleProps) => ({
-      width: "inherit",
+      width: "100%",
       borderRadius: "10%",
       filter: props.hover ? "grayscale(0%)" : "grayscale(100%)",
     }),
