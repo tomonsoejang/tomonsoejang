@@ -15,12 +15,9 @@ const loadStore = () => {
 
 const initialState = loadStore();
 
-interface Context {
-  state: typeof initialState;
-  toggleDarkMode?: () => void;
-}
+type Context = [state: typeof initialState, toggleDarkMode?: () => void];
 
-export const StoreContext = createContext<Context>({ state: initialState });
+export const StoreContext = createContext<Context>([initialState]);
 
 const Store = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -32,7 +29,7 @@ const Store = ({ children }) => {
   };
 
   return (
-    <StoreContext.Provider value={{ state, toggleDarkMode }}>
+    <StoreContext.Provider value={[state, toggleDarkMode]}>
       {children}
     </StoreContext.Provider>
   );
