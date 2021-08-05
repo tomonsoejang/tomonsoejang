@@ -72,11 +72,11 @@ const Experience: React.FC<ExperienceProps> = ({}) => {
             className={classes.tabs}
           >
             <Tab
-              label="Conversion Bug: July 2017 - Mar 2018"
+              label="Conversion Bug: Apr 2018 - May 2019"
               {...a11yProps(0)}
             />
             <Tab
-              label="Conversion Bug: Apr 2018 - May 2019"
+              label="Conversion Bug: July 2017 - Mar 2018"
               {...a11yProps(1)}
             />
           </Tabs>
