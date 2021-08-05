@@ -1,11 +1,14 @@
 import {
+  Box,
   createStyles,
   Link,
   makeStyles,
+  Switch,
   Theme,
   Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { useContext } from "react";
+import { StoreContext } from "../../../Store";
 import data from "../../data/data";
 
 /**
@@ -26,11 +29,21 @@ const useStyles = makeStyles((theme: Theme) =>
       textTransform: "uppercase",
       marginTop: props.isMobile ? theme.spacing(2) : 0,
     }),
+    row: {
+      display: "flex",
+      alignItems: "baseline",
+      justifyContent: "space-around",
+    },
+    rowText: (props: StyleProps) => ({
+      textTransform: "uppercase",
+      marginTop: props.isMobile ? theme.spacing(2) : 0,
+    }),
   })
 );
 
 const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
   const classes = useStyles({ isMobile });
+  const [{ darkMode }, toggleDarkMode] = useContext(StoreContext);
 
   return (
     <>
@@ -75,6 +88,17 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
       >
         <Typography>Resume</Typography>
       </Link>
+      <Box component="span" className={classes.row}>
+        <Typography className={classes.rowText}>Dark</Typography>
+        <Switch
+          checked={darkMode}
+          onChange={() => {
+            toggleDarkMode();
+          }}
+          name="Dark Mode"
+          inputProps={{ "aria-label": "dark mode" }}
+        />
+      </Box>
     </>
   );
 };

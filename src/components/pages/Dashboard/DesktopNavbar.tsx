@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuContainer: {
       display: "flex",
+      alignItems: "center",
     },
     menuItem: {
       margin: 20,

@@ -21,11 +21,7 @@ function handleRender(req, res) {
 
     // Render the component to a string.
     const html = ReactDOMServer.renderToString(
-      sheets.collect(
-        <ThemeProvider theme={theme}>
-          <App />
-        </ThemeProvider>,
-      ),
+      sheets.collect(<App />),
     );
   
     // Grab the CSS from the sheets.
