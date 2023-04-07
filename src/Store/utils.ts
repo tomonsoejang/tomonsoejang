@@ -1,6 +1,5 @@
-import { DARK_MODE } from "./contant";
-
-var localStore = require("store");
+import localStore from 'store';
+import { DARK_MODE } from './contant';
 
 export let saveDarkMode = (darkMode: boolean) => {
   localStore.set(DARK_MODE, darkMode);
