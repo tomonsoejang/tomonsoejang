@@ -54,6 +54,7 @@ const AboutMe: React.FC<AboutMeProps> = ({}) => {
           </Grid>
           <Grid item md={4} className={classes.image}>
             <img
+              alt="Profile Image"
               className={classes.image}
               src={data.profileImage}
               onMouseOver={onMouseOver}

@@ -1,7 +1,9 @@
-import { Box } from "@material-ui/core";
-import React from "react";
+import { Box } from '@material-ui/core';
+import React from 'react';
 
-interface SectionContainerProps {}
+interface SectionContainerProps {
+  children: React.ReactNode;
+}
 
 const SectionContainer: React.FC<SectionContainerProps> = ({ children }) => {
   return <Box py={10}>{children}</Box>;

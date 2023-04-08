@@ -93,7 +93,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         <Switch
           checked={darkMode}
           onChange={() => {
-            toggleDarkMode();
+            toggleDarkMode && toggleDarkMode();
           }}
           name="Dark Mode"
           inputProps={{ 'aria-label': 'dark mode' }}

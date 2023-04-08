@@ -1,7 +1,7 @@
-import { createContext, useReducer } from "react";
-import { TOGGLE_DARKMODE } from "./actions";
-import reducer from "./reducer";
-import { getDarkMode } from "./utils";
+import React, { createContext, useReducer } from 'react';
+import { TOGGLE_DARKMODE } from './actions';
+import reducer from './reducer';
+import { getDarkMode } from './utils';
 
 let defaultStore = { darkMode: false };
 
@@ -19,7 +19,11 @@ type Context = [state: typeof initialState, toggleDarkMode?: () => void];
 
 export const StoreContext = createContext<Context>([initialState]);
 
-const Store = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Store: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const toggleDarkMode = () => {

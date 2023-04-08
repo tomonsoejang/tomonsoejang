@@ -1,7 +1,9 @@
-import { createStyles, makeStyles, Theme, Typography } from "@material-ui/core";
-import React from "react";
+import { createStyles, makeStyles, Theme, Typography } from '@material-ui/core';
+import React from 'react';
 
-interface HeadingProps {}
+interface HeadingProps {
+  children: React.ReactNode;
+}
 
 const Heading: React.FC<HeadingProps> = ({ children }) => {
   const classes = useStyles();

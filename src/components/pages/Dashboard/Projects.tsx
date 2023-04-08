@@ -25,7 +25,11 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
 
         <Grid container spacing={2}>
           <Grid item md={3}>
-            <img src={data.kyfImage} className={classes.image} />
+            <img
+              alt="kyf-image"
+              src={data.kyfImage}
+              className={classes.image}
+            />
           </Grid>
           <Grid item md={9}>
             <Grid container spacing={2}>
