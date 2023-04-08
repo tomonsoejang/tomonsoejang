@@ -6,10 +6,10 @@ import {
   Switch,
   Theme,
   Typography,
-} from "@material-ui/core";
-import React, { useContext } from "react";
-import { StoreContext } from "../../../Store";
-import data from "../../data/data";
+} from '@material-ui/core';
+import React, { useContext } from 'react';
+import { StoreContext } from '../../../Store';
+import data from '../../../config/data';
 
 /**
  * onClose: In Mobile displays, when user click on a menuItem, close the drawerMenu
@@ -26,16 +26,16 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     menuButton: (props: StyleProps) => ({
       marginRight: props.isMobile ? 0 : theme.spacing(10),
-      textTransform: "uppercase",
+      textTransform: 'uppercase',
       marginTop: props.isMobile ? theme.spacing(2) : 0,
     }),
     row: {
-      display: "flex",
-      alignItems: "baseline",
-      justifyContent: "space-around",
+      display: 'flex',
+      alignItems: 'baseline',
+      justifyContent: 'space-around',
     },
     rowText: (props: StyleProps) => ({
-      textTransform: "uppercase",
+      textTransform: 'uppercase',
       marginTop: props.isMobile ? theme.spacing(2) : 0,
     }),
   })
@@ -96,7 +96,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
             toggleDarkMode();
           }}
           name="Dark Mode"
-          inputProps={{ "aria-label": "dark mode" }}
+          inputProps={{ 'aria-label': 'dark mode' }}
         />
       </Box>
     </>

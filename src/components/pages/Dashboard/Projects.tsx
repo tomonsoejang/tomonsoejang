@@ -6,13 +6,13 @@ import {
   makeStyles,
   Theme,
   Typography,
-} from "@material-ui/core";
-import LaunchIcon from "@material-ui/icons/Launch";
-import React from "react";
-import Chips from "../../commons/Chip/Chips";
-import SectionContainer from "../../commons/Layout/SectionContainer";
-import Heading from "../../commons/Text/Heading";
-import data from "../../data/data";
+} from '@material-ui/core';
+import LaunchIcon from '@material-ui/icons/Launch';
+import React from 'react';
+import Chips from '../../commons/Chip/Chips';
+import SectionContainer from '../../commons/Layout/SectionContainer';
+import Heading from '../../commons/Text/Heading';
+import data from '../../../config/data';
 
 interface ProjectsProps {}
 
@@ -45,7 +45,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
               React Native.
             </Typography>
             <Chips
-              data={["React Native", "React Native Elements", "Next.js"]}
+              data={['React Native', 'React Native Elements', 'Next.js']}
             />
           </Grid>
         </Grid>
@@ -57,7 +57,7 @@ const Projects: React.FC<ProjectsProps> = ({}) => {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     image: {
-      width: "100%",
+      width: '100%',
     },
   })
 );

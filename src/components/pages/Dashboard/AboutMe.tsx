@@ -5,12 +5,12 @@ import {
   makeStyles,
   Theme,
   Typography,
-} from "@material-ui/core";
-import React, { useState } from "react";
-import Chips from "../../commons/Chip/Chips";
-import SectionContainer from "../../commons/Layout/SectionContainer";
-import Heading from "../../commons/Text/Heading";
-import data from "../../data/data";
+} from '@material-ui/core';
+import React, { useState } from 'react';
+import Chips from '../../commons/Chip/Chips';
+import SectionContainer from '../../commons/Layout/SectionContainer';
+import Heading from '../../commons/Text/Heading';
+import data from '../../../config/data';
 
 interface AboutMeProps {}
 
@@ -73,9 +73,9 @@ interface StyleProps {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     image: (props: StyleProps) => ({
-      width: "100%",
-      borderRadius: "10%",
-      filter: props.hover ? "grayscale(0%)" : "grayscale(100%)",
+      width: '100%',
+      borderRadius: '10%',
+      filter: props.hover ? 'grayscale(0%)' : 'grayscale(100%)',
     }),
     // root: {
     //   width: "100%",

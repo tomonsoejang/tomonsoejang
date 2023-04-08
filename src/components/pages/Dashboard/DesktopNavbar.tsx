@@ -1,34 +1,34 @@
-import { Box, createStyles, makeStyles, Theme } from "@material-ui/core";
-import React from "react";
-import data from "../../data/data";
-import MenuItems from "./MenuItems";
+import { Box, createStyles, makeStyles, Theme } from '@material-ui/core';
+import React from 'react';
+import data from '../../../config/data';
+import MenuItems from './MenuItems';
 
 interface DesktopNavbarProps {}
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      display: "flex",
-      width: "100%",
-      position: "absolute",
-      justifyContent: "flex-end",
+      display: 'flex',
+      width: '100%',
+      position: 'absolute',
+      justifyContent: 'flex-end',
       paddingTop: 30,
-      color: "white",
+      color: 'white',
       backgroundImage: `url(${data.bannerImage})`,
-      backgroundSize: "cover",
+      backgroundSize: 'cover',
     },
     title: {
       flexGrow: 1,
     },
     menuContainer: {
-      display: "flex",
-      alignItems: "center",
+      display: 'flex',
+      alignItems: 'center',
     },
     menuItem: {
       margin: 20,
     },
     banner: {
-      width: "100%",
+      width: '100%',
     },
   })
 );

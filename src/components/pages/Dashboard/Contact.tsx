@@ -5,13 +5,13 @@ import {
   Link,
   makeStyles,
   Theme,
-  Typography
-} from "@material-ui/core";
-import { GitHub, Instagram, LinkedIn } from "@material-ui/icons";
-import React from "react";
-import SectionContainer from "../../commons/Layout/SectionContainer";
-import Heading from "../../commons/Text/Heading";
-import data from "../../data/data";
+  Typography,
+} from '@material-ui/core';
+import { GitHub, Instagram, LinkedIn } from '@material-ui/icons';
+import React from 'react';
+import SectionContainer from '../../commons/Layout/SectionContainer';
+import Heading from '../../commons/Text/Heading';
+import data from '../../../config/data';
 
 interface ContactProps {}
 
@@ -60,7 +60,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      textAlign: "center",
+      textAlign: 'center',
     },
     items: {
       margin: 20,
