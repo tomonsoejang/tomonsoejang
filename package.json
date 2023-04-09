@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "build:static": "next build && next export",
+    "build": "nx exec -- yarn _build ",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "nx exec -- next lint",
+    "_build": "next build && next export"
   },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
@@ -23,6 +23,17 @@
     "@types/node": "^18.15.11",
     "@types/store": "^2.0.2",
     "babel-plugin-styled-components": "^1.13.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "nx": "15.9.2",
+    "@nrwl/nx-cloud": "latest"
+  },
+  "nx": {
+    "targets": {
+      "build": {
+        "outputs": [
+          "{projectRoot}/out"
+        ]
+      }
+    }
   }
 }
