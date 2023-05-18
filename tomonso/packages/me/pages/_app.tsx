@@ -1,6 +1,8 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
+import { Paper, ThemeProvider } from '@material-ui/core';
+import { darkTheme, lightTheme } from '../src/theme';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -8,9 +10,11 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Welcome to me!</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <ThemeProvider theme={false ? darkTheme : lightTheme}>
+        <Paper>
+          <Component {...pageProps} />
+        </Paper>
+      </ThemeProvider>
     </>
   );
 }

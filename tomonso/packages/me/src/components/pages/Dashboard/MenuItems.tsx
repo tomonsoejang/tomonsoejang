@@ -3,6 +3,7 @@ import {
   createStyles,
   Link,
   makeStyles,
+  styled,
   Switch,
   Theme,
   Typography,
@@ -40,6 +41,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+const MenuItemText = styled(Typography)({
+  textTransform: 'none',
+});
+
 const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
   const classes = useStyles({ isMobile });
   const darkMode = false;
@@ -53,7 +58,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         className={classes.menuButton}
         onClick={onClose}
       >
-        <Typography>About</Typography>
+        <MenuItemText>About</MenuItemText>
       </Link>
       <Link
         href="#experience"
@@ -61,7 +66,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         className={classes.menuButton}
         onClick={onClose}
       >
-        <Typography>Experience</Typography>
+        <MenuItemText>Experience</MenuItemText>
       </Link>
       <Link
         href="#projects"
@@ -69,7 +74,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         className={classes.menuButton}
         onClick={onClose}
       >
-        <Typography>Projects</Typography>
+        <MenuItemText>Projects</MenuItemText>
       </Link>
       <Link
         href="#contact"
@@ -77,7 +82,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         className={classes.menuButton}
         onClick={onClose}
       >
-        <Typography>Contact</Typography>
+        <MenuItemText>Contact</MenuItemText>
       </Link>
       <Link
         href={data.resumeLink}
@@ -86,7 +91,7 @@ const MenuItems: React.FC<MenuItemsProps> = ({ isMobile, onClose }) => {
         target="_blank"
         onClick={onClose}
       >
-        <Typography>Resume</Typography>
+        <MenuItemText>Resume</MenuItemText>
       </Link>
       <Box component="span" className={classes.row}>
         <Typography className={classes.rowText}>Dark</Typography>
